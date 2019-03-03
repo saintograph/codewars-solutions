@@ -3,15 +3,11 @@
 */
 
 const strip = (a) => {
-  // top strip
   let s = [...a.shift()];
-  // right most
   for(let i = 0; i < a.length; i++) {
     s.push(a[i].pop())
   }
-  // bottom
   s.push(...a.pop().reverse())
-  // left most
   for(let i = a.length - 1; i >= 0; i--) {
     s.push(a[i].shift());
   }
